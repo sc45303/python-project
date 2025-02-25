@@ -67,9 +67,9 @@ page = st.sidebar.radio("Go to", [ "Income", "Expenses", "Budgeting"])
 if page == "Overview":
     from pages import overview
     overview.app()
-# elif page == "Income":
-    # from pages import income
-    # income.app()
+elif page == "Income":
+    from pages import income
+    income.app()
 elif page == "Expenses":
     from pages import expenses
     expenses.app()
