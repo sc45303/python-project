@@ -33,15 +33,15 @@ st.title('💰  Expense Tracker')
 
 with st.sidebar:
     st.header('Add Expense 💳')
-    date = st.date_input('Date')
-    category = st.selectbox('Category', ['Food', 'Transport', 'Entertainment', 'Utilities', 'Other'])
+    date = st.date_input('Date  ')
+    category = st.selectbox('Category ', ['Food', 'Transport', 'Entertainment', 'Utilities', 'Other'])
     amount = st.number_input('Amount', min_value=0.0, format="%.2f")
     description = st.text_input('Description')
     if st.button('Add'):
         add_expense(date, category, amount, description)
         st.success(' 💸 Expense added!')
 
-    st.header('File Operations')
+    st.header('File Operations 📁')
     if st.button('Save Expenses'):
         save_expenses()
     if st.button('Load Expenses'):
@@ -50,6 +50,6 @@ with st.sidebar:
 st.header('Expenses')
 st.write(st.session_state.expenses)
 
-st.header('Visualization')
+st.header(' 🧐 Visualization ')
 if st.button('Visualize Expenses'):
     visualize_expenses()
